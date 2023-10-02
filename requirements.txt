@@ -1,0 +1,7 @@
+fastapi==0.103.2
+diator==0.1.2
+uvicorn
+standard
+redis
+di
+pylint
