@@ -1,13 +1,9 @@
-docker-build:
-	docker build -t playground .
+up:
+	docker-compose up -d
 
-docker-run:
-	docker run -d --name playground -p 8000:80 playground
+down:
+	docker-compose down
+	docker system prune -a -f
+	docker rmi playground
 
-docker-trash:
-	docker stop playground
-	docker rm playground
-
-run: docker-build docker-run
-
-restart: docker-trash run
+restart: down up

@@ -1,0 +1,7 @@
+services:
+  playground:
+    build: .
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/usr/src/app

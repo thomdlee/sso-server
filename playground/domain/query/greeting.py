@@ -23,4 +23,4 @@ class GreetingQueryHandler(RequestHandler[GreetingQuery, GreetingQueryResult]):
         return self._events
 
     async def handle(self, request: GreetingQuery) -> GreetingQueryResult:
-        return GreetingQueryResult(greeting="Hello, from another language!")
+        return GreetingQueryResult(greeting="Hello, from another hot loaded file again! And again!")

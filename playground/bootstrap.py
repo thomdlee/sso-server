@@ -5,11 +5,11 @@ from diator.events import EventMap, EventEmitter
 from diator.mediator import Mediator
 from diator.requests import RequestMap
 
-from application.command.helloworld import HelloWorldCommandHandler, HelloWorldCommand
-from application.query.greeting import GreetingQueryHandler, GreetingQuery
+from playground.domain.command.helloworld import HelloWorldCommandHandler, HelloWorldCommand
+from playground.domain.query.greeting import GreetingQueryHandler, GreetingQuery
 
 
-async def mediator() -> Mediator:
+def bootstrap() -> Mediator:
     external_container = Container()
     container = DIContainer()
     request_map = RequestMap()
