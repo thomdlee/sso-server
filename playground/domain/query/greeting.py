@@ -4,8 +4,12 @@ from diator.requests import Request, RequestHandler
 from diator.response import Response
 
 
+class Query:
+    pass
+
+
 @dataclasses.dataclass(frozen=True, kw_only=True)
-class GreetingQuery(Request):
+class GreetingQuery(Query, Request):
     pass
 
 

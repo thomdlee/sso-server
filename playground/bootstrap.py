@@ -17,14 +17,14 @@ def bootstrap() -> Mediator:
     external_container.bind(
         bind_by_type(
             Dependent(HelloWorldCommandHandler, scope="request"),
-            HelloWorldCommandHandler
+            HelloWorldCommandHandler,
         )
     )
 
     external_container.bind(
         bind_by_type(
             Dependent(GreetingQueryHandler, scope="request"),
-            GreetingQueryHandler
+            GreetingQueryHandler,
         )
     )
 
@@ -35,11 +35,11 @@ def bootstrap() -> Mediator:
     event_emitter = EventEmitter(
         event_map=EventMap(),
         container=container,
-        message_broker=None
+        message_broker=None,
     )
 
     return Mediator(
         request_map=request_map,
         event_emitter=event_emitter,
-        container=container
+        container=container,
     )

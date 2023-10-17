@@ -3,8 +3,12 @@ from diator.events import Event
 from diator.requests import Request, RequestHandler
 
 
-@dataclass(frozen=True, kw_only=True)
-class HelloWorldCommand(Request):
+class Command:
+    pass
+
+
+@dataclass
+class HelloWorldCommand(Command):
     greeting: str
 
 
