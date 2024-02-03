@@ -5,3 +5,10 @@ standard
 redis
 di
 pylint
+python-multipart
+pydantic
+python-jose
+cryptography
+passlib
+bcrypt
+jose

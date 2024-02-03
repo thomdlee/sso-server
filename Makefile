@@ -4,6 +4,6 @@ up:
 down:
 	docker-compose down
 	docker system prune -a -f
-	docker rmi playground
+	docker-compose rm -f
 
 restart: down up
