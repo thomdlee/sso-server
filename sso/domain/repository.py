@@ -1,17 +1,13 @@
 import abc
 
-from playground.domain.model import User
-
-
-class UserDocument(User):
-    hashed_password: str
+from pydantic import BaseModel
 
 
 class AbstractRepository(abc.ABC):
     @abc.abstractmethod
-    def add(self, user: User):
+    def add(self, model: BaseModel):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def get(self, reference) -> User:
+    def get(self, reference) -> BaseModel:
         raise NotImplementedError

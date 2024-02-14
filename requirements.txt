@@ -1,5 +1,8 @@
 fastapi==0.103.2
+fastapi-sso
+passlib
 diator==0.1.2
+black
 uvicorn
 standard
 redis

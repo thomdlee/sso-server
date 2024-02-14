@@ -1,5 +1,5 @@
 services:
-  playground:
+  python-uvicorn:
     build: .
     ports:
       - "${HTTP_PORT}:80"
